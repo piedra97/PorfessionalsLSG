@@ -12,6 +12,7 @@ class JobDescriptionViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var jobDescription: UILabel!
     var professionalToDisplay:Professional?
 
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class JobDescriptionViewController: UIViewController {
         
         if let currentProfessional = professionalToDisplay{
             self.imageView.image = UIImage(named: currentProfessional.imageName)
+            jobDescription.text = currentProfessional.description
         }
 
         // Do any additional setup after loading the view.

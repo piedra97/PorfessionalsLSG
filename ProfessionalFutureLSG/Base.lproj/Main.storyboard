@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AqW-wd-NQQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AqW-wd-NQQ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -92,13 +92,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designer.png" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-fB-wUs" customClass="JobDes">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="designer.png" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-fB-wUs" customClass="JobDes">
+                                <rect key="frame" x="8" y="96" width="398" height="577"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl3-Qm-7AP">
+                                <rect key="frame" x="20" y="695" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PCC-4T-8mY" firstAttribute="bottom" secondItem="pEl-fB-wUs" secondAttribute="bottom" constant="8" id="Run-TU-rdL"/>
+                            <constraint firstItem="Nl3-Qm-7AP" firstAttribute="leading" secondItem="PCC-4T-8mY" secondAttribute="leading" constant="10" id="3y9-a4-UEZ"/>
+                            <constraint firstItem="Nl3-Qm-7AP" firstAttribute="top" secondItem="pEl-fB-wUs" secondAttribute="bottom" constant="70" id="GOP-sb-hjY"/>
+                            <constraint firstItem="PCC-4T-8mY" firstAttribute="trailing" secondItem="Nl3-Qm-7AP" secondAttribute="trailing" constant="10" id="LFm-Kq-oz0"/>
                             <constraint firstItem="pEl-fB-wUs" firstAttribute="top" secondItem="PCC-4T-8mY" secondAttribute="top" constant="8" id="jnj-OD-97h"/>
                             <constraint firstItem="PCC-4T-8mY" firstAttribute="trailing" secondItem="pEl-fB-wUs" secondAttribute="trailing" constant="8" id="wEs-UO-kFl"/>
                             <constraint firstItem="pEl-fB-wUs" firstAttribute="leading" secondItem="PCC-4T-8mY" secondAttribute="leading" constant="8" id="x7L-I0-lH6"/>
@@ -107,11 +115,12 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pEl-fB-wUs" id="9eo-yX-nTY"/>
+                        <outlet property="jobDescription" destination="Nl3-Qm-7AP" id="1H4-61-8mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpW-dR-yAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="1059"/>
+            <point key="canvasLocation" x="1557.9710144927537" y="1058.7053571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wam-EZ-uzF">
