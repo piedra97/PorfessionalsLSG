@@ -10,15 +10,20 @@ import UIKit
 
 class WantedToBeViewController: UIViewController, UISplitViewControllerDelegate {
     
+    
     let professionals = [
-        "developer":Professional(title: "Developer", imageName:"developer.jpg", description: "One who programs computers or designs the system to match the requirements of a systems analyst."),
-        "uxDesigner":Professional(title: "UXDesigner", imageName:"designer.png", description: "Measure and optimise applications (usually web based) to improve ease of use (usability), and create the best user experience."),
-        "projectManager":Professional(title: "Project Manager", imageName:"projectManager.jpg", description: "The person in charge of a specific project or projects within a company. As the project manager, your job is to plan, budget, oversee and document all aspects of the specific project you are working on.")
+        0:Professional(title: "Developer", imageName:"developer.jpg", description: "One who programs computers or designs the system to match the requirements of a systems analyst."),
+        1:Professional(title: "UXDesigner", imageName:"designer.png", description: "Measure and optimise applications (usually web based) to improve ease of use (usability), and create the best user experience."),
+        2:Professional(title: "Project Manager", imageName:"projectManager.jpg", description: "The person in charge of a specific project or projects within a company. As the project manager, your job is to plan, budget, oversee and document all aspects of the specific project you are working on.")
     ]
     
     override func awakeFromNib(){
         super.awakeFromNib()
         self.splitViewController?.delegate = self
+    }
+    
+    @IBAction func chooseButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Choose Job", sender: sender)
     }
     
     func splitViewController (
@@ -35,8 +40,8 @@ class WantedToBeViewController: UIViewController, UISplitViewControllerDelegate 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let jdvc = segue.destination as? JobDescriptionViewController{
-            if let segueIdentifier = segue.identifier{
-                jdvc.professionalToDisplay = professionals[segueIdentifier]
+            if let button = sender as? UIButton{
+                jdvc.professionalToDisplay = professionals[button.tag]
             }
         }
     }

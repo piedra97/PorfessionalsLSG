@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AqW-wd-NQQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AqW-wd-NQQ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,23 +46,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Developer"/>
                                         <connections>
-                                            <segue destination="Bu3-X1-3Ec" kind="showDetail" identifier="developer" id="69E-iW-w9U"/>
+                                            <action selector="chooseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gh-Gq-qsj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3It-2w-7aH">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3It-2w-7aH">
                                         <rect key="frame" x="0.0" y="56" width="211" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="UXDesigner"/>
                                         <connections>
-                                            <segue destination="Bu3-X1-3Ec" kind="showDetail" identifier="uxDesigner" id="Yoq-SW-QxU"/>
+                                            <action selector="chooseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fye-Di-NYT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh9-GL-RzD">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh9-GL-RzD">
                                         <rect key="frame" x="0.0" y="112" width="211" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Project Manager"/>
                                         <connections>
-                                            <segue destination="Bu3-X1-3Ec" kind="showDetail" identifier="projectManager" id="Us7-qe-7Rp"/>
+                                            <action selector="chooseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fb5-YD-cLT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,6 +79,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="ProfessionalFuture" id="bmL-4I-1uw"/>
+                    <connections>
+                        <segue destination="Bu3-X1-3Ec" kind="showDetail" identifier="Choose Job" id="ydi-sv-vDi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +153,6 @@
         <image name="designer.png" width="249" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aKF-LZ-R3O"/>
+        <segue reference="ydi-sv-vDi"/>
     </inferredMetricsTieBreakers>
 </document>
